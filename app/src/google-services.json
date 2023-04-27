@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "532852568900",
+    "project_id": "itintern-3150a",
+    "storage_bucket": "itintern-3150a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532852568900:android:66b9b91fefb2adddf25d11",
+        "android_client_info": {
+          "package_name": "com.example.quantem_it_intern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532852568900-fm1mio91t4096vu44r5g2q1fk5k7boqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4-P3BTYWng25hsg8pt_Xs6SSu16yRWE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532852568900-fm1mio91t4096vu44r5g2q1fk5k7boqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
