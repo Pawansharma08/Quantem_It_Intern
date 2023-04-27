@@ -1,17 +1,23 @@
 package com.example.quantem_it_intern
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.quantem_it_intern.Adapter.NewsAdapter
 import com.example.quantem_it_intern.Api.NewsSrevice
+import com.example.quantem_it_intern.Fragment.LoginFrag
 import com.example.quantem_it_intern.Model.Article
 import com.example.quantem_it_intern.Model.News
 import com.example.quantem_it_intern.databinding.ActivityHomeBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class Home_Activity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -51,5 +57,22 @@ class Home_Activity : AppCompatActivity() {
                 Log.d("Pawan", "Error featching News")
             }
         })
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+            R.id.Logout -> {
+                startActivity(Intent(this, LoginFrag::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.log, menu)
+        return true
     }
 }

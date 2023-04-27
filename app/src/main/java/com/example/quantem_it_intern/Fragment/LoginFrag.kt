@@ -1,6 +1,7 @@
 package com.example.quantem_it_intern.Fragment
 
 import android.app.Activity
+import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
@@ -123,9 +124,11 @@ class LoginFrag : Fragment() {
 
     private val launcher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == Activity.RESULT_OK) {
+            if (result.resultCode == Activity.RESULT_CANCELED) {
                 val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
                 handleResults(task)
+                val intent = Intent(requireContext(), Home_Activity::class.java)
+                requireActivity().startActivity(intent)
             }else{
                 Log.e("TAG",result.toString())
                 Log.e("TAG",result.resultCode .toString())
